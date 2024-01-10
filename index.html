@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <div class="bg-main-desktop"></div>
+  
+  <div class="card-images">
+    <img class="card-front" src="images/bg-card-front.png" alt="Card Front">
+    <img class="card-back" src="images/bg-card-back.png" alt="Card Back">
+    <svg class="card-logo" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+  
+    <div class="card-number-overlay">0000 0000 0000 0000</div>
+    <div class="card-name-overlay">NAME</div>
+    <div class="card-date-overlay">date</div>
+    <div class="card-cvc-overlay">cvc</div>
+  </div>
+  
+
+  <div class="container">
+    <div class="card">
+      <div class="card-images">
+        
+      </div>
+      <div class="card-details">
+        <div class="card-holder">
+          <label for="cardholder">Cardholder Name</label>
+          <input type="text" id="cardholder" placeholder="e.g. Jane Appleseed">
+        </div>
+
+        <div class="card-number-input">
+          <label for="cardnumber">Card Number</label>
+          <input type="text" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+
+        <div class="expiry-cvc">
+          <div class="expiry">
+            <label for="expiry">Exp. Date (MM/YY)</label>
+            <div class="expiry-inputs">
+              <input type="text" id="expiry-month" placeholder="MM">
+              <input type="text" id="expiry-year" placeholder="YY">
+            </div>
+          </div>
+
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="e.g. 123">
+          </div>
+        </div>
+      </div>
+
+      <button class="confirm-button">Confirm</button>
+
+      <!-- Completed state start -->
+      <div class="completed-state">
+        <svg class="completion-icon" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="url(#a)" />
+          <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+          <defs>
+            <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6348FE" />
+              <stop offset="1" stop-color="#610595" />
+            </linearGradient>
+          </defs>
+        </svg>
+      
+        <p class="thank-you">THANK YOU!</p>
+        <p>We've added your card details.</p>
+        <button class="continue-button">Continue</button>
+      </div>
+
+      <!-- Active state message -->
+      <div class="active-state-message" style="display: none;">
+        <p>Invalid input. Please correct the formatting.</p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Erfan Tardast</a>.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

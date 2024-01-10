@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1eded;
+}
+
+.bg-main-desktop {
+    flex: 0 0 30%;
+    height: 100%;
+    background: url('./images/bg-main-desktop.png') no-repeat;
+    background-size: cover;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.card-number {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.card-details {
+    margin-bottom: 20px;
+}
+
+.card-details label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #000;
+}
+
+.card-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.card-details input:focus,
+.card-details input:hover {
+    border-color: hsl(249, 99%, 64%);
+}
+
+.card-details input.error,
+.card-details input:focus.error,
+.card-details input:hover.error {
+    border-color: hsl(0, 100%, 66%);
+}
+
+.expiry-cvc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-inputs {
+    display: flex;
+}
+
+.confirm-button {
+    background-color: hsl(278, 68%, 11%);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-state-message,
+.completed-state {
+    display: none;
+    margin-top: 40px;
+    position: static;
+    bottom: 100px;
+}
+
+.active-state-message p {
+    color: hsl(0, 100%, 66%);
+}
+
+.completed-state p.thank-you {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+.completed-state p {
+    font-size: 20px;
+    color: #555;
+}
+
+.continue-button {
+    background-color: hsl(249, 99%, 64%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-top: auto; /* Change to 'auto' to push it to the bottom */
+    color: #555;
+    padding: 0;
+    background-color: #f7f7f700;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-35%);
+    width: 100%; /* Set width to 100% to span the entire width */
+}
+
+/* ... (unchanged) */
+
+.card-images {
+    position: absolute; 
+    top: 200px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-front,
+  .card-back {
+    width: 70%; /* Make the images 20% smaller */
+    height: auto;
+    box-shadow: 10px 10px 20px rgba(67, 69, 143, 0.801); /* Add box shadow */
+    position: relative; /* Add position relative for manual positioning */
+    border-radius: 10px; /* Set rounded corners */
+  }
+  
+  .card-front {
+    transform: translate(+20px, -20px); /* Example: Adjust the position manually */
+}
+
+.card-back {
+    transform: translate(+150px, +20px); /* Example: Adjust the position manually */
+}
+
+  .card-number-overlay {
+    position: absolute;
+    top: 90px;
+    left: 40px; /* Adjust the left position to move it more to the left */
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffffb2;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .completed-state p.added-details {
+    font-size: 18px;
+    color: #888;
+  }
+  .card-name-overlay {
+    position: absolute;
+    top: 130px;
+    left: 40px; /* Adjust the left position to move it more to the left */
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffffb2;
+    pointer-events: none;
+    z-index: 2;
+
+  }
+  .card-date-overlay{
+    position: absolute;
+    top: 130px;
+    left: 280px; /* Adjust the left position to move it more to the left */
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffffb2;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .card-cvc-overlay {
+    position: absolute;
+    top: 275px;
+    left: 400px; /* Adjust the left position to move it more to the left */
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000b2;
+    pointer-events: none;
+    z-index: 2;
+
+  }
+  .card-logo {
+    position: absolute;
+    top: 20px; /* Adjust the top position to move it 20px above the card number overlay */
+    left: 40px; /* Adjust the left position as needed */
+    transform: translateY(-50%);
+    z-index: 3; /* Set a higher z-index to make sure it's above other elements */
+}
